@@ -1,31 +1,584 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b3d2b">
-<title>Proposta para André Luiz | Aniceto</title>
-<style>
-:root{--g:#0b3d2b;--g2:#145c40;--gold:#d4af37;--ink:#202629;--muted:#67726c;--line:#dfe5e0;--bg:#f5f7f4;--white:#fff}*{box-sizing:border-box}html,body{height:100%;margin:0}body{font-family:Arial,Helvetica,sans-serif;background:#dfe6e1;color:var(--ink);overflow:hidden}.app{width:min(100%,520px);height:100dvh;margin:auto;background:var(--bg);overflow:hidden;box-shadow:0 20px 60px #1233;position:relative}.top{height:72px;padding:max(10px,env(safe-area-inset-top)) 16px 8px;background:#fffc;border-bottom:1px solid var(--line);display:flex;align-items:flex-end;gap:12px}.brand{color:var(--g);font-weight:900;font-size:12px;letter-spacing:.08em;display:flex;align-items:center;gap:6px}.brand svg{width:34px}.prog{flex:1}.meta{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:6px}.track{height:4px;background:#e3e8e4;border-radius:9px;overflow:hidden}.track i{display:block;height:100%;width:12.5%;background:linear-gradient(90deg,var(--g),var(--gold));transition:.3s}.slides{height:calc(100dvh - 72px - 70px - 25px);position:relative}.slide{position:absolute;inset:0;padding:24px 20px;overflow:auto;opacity:0;transform:translateX(20px);pointer-events:none;transition:.28s;background:var(--bg)}.slide.active{opacity:1;transform:none;pointer-events:auto}.slide::-webkit-scrollbar{display:none}.hero{padding:0;background:var(--g);color:#fff}.hero svg.bg{width:100%;height:100%;display:block}.shade{position:absolute;inset:0;background:linear-gradient(#0000 28%,#052a1c77 58%,#052a1cf7 88%)}.heroText{position:absolute;left:22px;right:22px;bottom:22px}.mark{position:absolute;top:22px;left:22px;display:flex;align-items:center;gap:8px}.mark svg{width:52px}.mark strong{font-size:20px;letter-spacing:.08em}.mark small{display:block;font-size:7px;text-transform:uppercase}.ey{font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#bd8d13;margin:0 0 7px}.hero .ey{color:#f2d46f}h1,h2,p{margin-top:0}h1{font-size:34px;line-height:1.05;margin-bottom:10px}h2{font-size:28px;margin-bottom:12px}.lead{font-size:14px;line-height:1.55;color:#47524c}.hero .lead{color:#f2f6f3}.facts{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:11px;margin:14px 0}.btn{border:0;border-radius:14px;min-height:48px;padding:0 18px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}.primary{background:var(--g);color:#fff}.gold{background:linear-gradient(135deg,var(--gold),#e2bd4c);color:#263329;width:100%}.ghost{background:transparent;color:#34423b}.outline{width:100%;background:#fff;border:1px solid #b9c7bf;color:var(--g)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}.card b{display:block;font-size:12px;margin:7px 0 4px}.card small{font-size:9px;line-height:1.4;color:var(--muted)}.ico{width:32px;height:32px;border-radius:50%;background:#e7f0eb;color:var(--g);display:grid;place-items:center;font-weight:900}.quote{background:var(--g);color:#fff;border-radius:18px;padding:17px;font-size:13px;line-height:1.5}.diagram{background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px;margin:10px 0}.diagram svg{display:block;width:100%;max-height:260px}.spec{display:grid;grid-template-columns:1fr 1fr;gap:7px;font-size:10px;font-weight:700}.note{font-size:8.5px;line-height:1.45;color:#758079;margin-top:10px}.steps{display:grid;gap:7px;margin-top:10px}.step{background:#fff;border:1px solid var(--line);border-radius:13px;padding:9px;display:flex;gap:10px;align-items:center}.step b{width:27px;height:27px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center}.step strong{display:block;font-size:11px}.step small{font-size:8.5px;color:var(--muted)}.materials,.checks{display:grid;gap:10px;margin-top:16px}.row{background:#fff;border:1px solid var(--line);border-radius:15px;padding:14px;display:flex;gap:12px;align-items:center}.row span:first-child{font-size:22px;color:var(--gold);width:34px;text-align:center}.row strong{font-size:12px;display:block}.row small{font-size:9px;color:var(--muted)}.checks .row span:first-child{width:25px;height:25px;border-radius:50%;background:var(--g);color:#fff;font-size:13px;display:grid;place-items:center}.budgets{display:grid;gap:10px;margin:13px 0}.budget{position:relative;text-align:left;border:1px solid var(--line);background:#fff;border-radius:17px;padding:14px 44px 13px 14px;color:var(--ink)}.budget.sel{border:2px solid var(--g);box-shadow:0 8px 22px #0b3d2b1a}.dot{position:absolute;right:14px;top:14px;width:21px;height:21px;border:2px solid #a9b6ae;border-radius:50%}.budget.sel .dot{border:6px solid var(--g)}.budget small{font-size:8px;font-weight:900;color:#a77e0f}.budget strong{display:block;font-size:12px;margin:4px 0}.budget em{font-style:normal;font-size:21px;font-weight:900;color:var(--g)}.budget p{font-size:9px;color:var(--muted);line-height:1.4;margin:6px 0 0}.person{text-align:center;margin:15px 0}.person img{width:142px;height:142px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 10px 30px #1233}.person strong{display:block;font-size:13px;margin-top:9px}.person small{color:var(--muted)}.summary{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0}.summary small{font-size:8px;color:#a77e0f;font-weight:900}.summary strong{display:block;font-size:12px;margin:5px 0}.summary b{font-size:21px;color:var(--g)}.wa{width:100%;background:#15713f;color:#fff;min-height:58px}.nav{height:70px;background:#fff;border-top:1px solid var(--line);display:flex;gap:8px;padding:10px 15px calc(10px + env(safe-area-inset-bottom))}.nav .btn{flex:1}.foot{height:25px;background:var(--g);color:#dce9e1;font-size:8px;display:grid;place-items:center}.dlg{border:0;border-radius:24px 24px 0 0;width:min(100%,520px);height:min(82dvh,720px);margin:auto auto 0;padding:12px 20px 18px}.dlg::backdrop{background:#03160e99}.handle{width:45px;height:5px;background:#c8d0ca;border-radius:9px;margin:0 auto 12px}.dlg header{display:flex;justify-content:space-between}.dlg h2{font-size:24px}.x{border:0;border-radius:50%;width:36px;height:36px;font-size:24px}.list{list-style:none;padding:0;margin:10px 0 14px;max-height:calc(82dvh - 210px);overflow:auto}.list li{display:grid;grid-template-columns:48px 1fr;gap:8px;padding:9px 0;border-bottom:1px solid #edf0ed;font-size:11px;line-height:1.35}.list b{color:var(--g)}@media(max-height:700px){.slide{padding-top:15px}.diagram svg{max-height:205px}.grid{gap:7px}.card{padding:10px}.row{padding:10px}.person img{width:105px;height:105px}}
-</style>
-</head>
-<body>
-<main class="app">
-<header class="top"><div class="brand"><svg viewBox="0 0 64 40"><path d="M5 31 28 7l10 9-6 6-4-4-14 14z" fill="currentColor"/><path d="m21 34 20-20 18 18H48l-7-7-9 9z" fill="#d4af37"/></svg>ANICETO</div><div class="prog"><div class="meta"><span id="lab">Etapa 1 de 8</span><span id="ttl">Boas-vindas</span></div><div class="track"><i id="bar"></i></div></div></header>
-<section class="slides">
-<article class="slide hero active" data-title="Boas-vindas"><svg class="bg" viewBox="0 0 820 900" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b9d6e7"/><stop offset="1" stop-color="#eef3ee"/><linearGradient id="w"><stop stop-color="#9b6034"/><stop offset="1" stop-color="#573019"/></linearGradient></defs><rect width="820" height="900" fill="url(#sky)"/><path d="M0 700Q200 620 400 690T820 670V900H0Z" fill="#6e8b68"/><g fill="url(#w)"><path d="M155 280h25v410h-25zM365 245h25v445h-25zM620 200h25v490h-25zM235 365h22v325h-22zM455 327h22v363h-22zM690 286h22v404h-22z"/><path d="M135 268 640 185l16 24-508 86zM215 352 720 270l15 23-508 86z"/></g><path d="M125 250 635 165 730 260 220 347Z" fill="#a94d2b"/><g stroke="#d47b50" stroke-width="7"><path d="m170 242 90 96m75-108 90 96m75-108 90 96m75-108 45 48"/></g></svg><div class="shade"></div><div class="mark"><svg viewBox="0 0 120 76"><path d="M8 59 49 12l22 19-12 12-10-9-25 25z" fill="#fff"/><path d="m38 64 38-39 35 35H91L76 46 58 64z" fill="#d4af37"/></svg><div><strong>ANICETO</strong><small>Estruturas • Coberturas • Empreitadas</small></div></div><div class="heroText"><p class="ey">Proposta personalizada</p><h1>Olá, André Luiz.</h1><p class="lead">Preparamos uma apresentação clara para sua cobertura.</p><div class="facts"><span>⌂ Cobertura</span><span>↔ 10,00 × 3,50 m</span><span>⟋ Uma água</span></div><button class="btn gold go">Começar →</button></div></article>
-<article class="slide" data-title="Quem somos"><p class="ey">Confiança em cada etapa</p><h2>Quem somos</h2><p class="lead">A Aniceto trabalha com estruturas, coberturas e empreitadas, unindo experiência prática, cuidado e compromisso.</p><div class="grid"><div class="card"><span class="ico">⌂</span><b>Experiência prática</b><small>Execução orientada por quem conhece a obra.</small></div><div class="card"><span class="ico">✓</span><b>Materiais de qualidade</b><small>Seleção adequada ao serviço contratado.</small></div><div class="card"><span class="ico">♙</span><b>Atendimento direto</b><small>Contato com o responsável pela execução.</small></div><div class="card"><span class="ico">◷</span><b>Compromisso</b><small>Organização e transparência.</small></div></div><div class="quote">“Sua obra será executada com o mesmo cuidado que teríamos em nossa própria casa.”</div></article>
-<article class="slide" data-title="Sua obra"><p class="ey">Entendemos sua necessidade</p><h2>Sua obra</h2><p class="lead">Cobertura de aproximadamente <b>10,00 m × 3,50 m</b>, com uma única queda d’água.</p><div class="diagram"><svg viewBox="0 0 760 440"><defs><linearGradient id="rw"><stop stop-color="#a06439"/><stop offset="1" stop-color="#5e351f"/></linearGradient><marker id="a" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 8 4 0 8z" fill="#0b3d2b"/></marker></defs><ellipse cx="380" cy="354" rx="294" ry="38" fill="#0b3d2b" opacity=".07"/><g fill="url(#rw)"><path d="M130 184h24v168h-24zM344 147h24v205h-24zM565 108h24v244h-24zM202 260h20v96h-20zM416 222h20v134h-20zM637 183h20v173h-20z"/><path d="M118 176 582 96l16 22-466 82zM190 251 652 172l15 21-465 82z"/></g><path d="M106 162 576 80 675 163 205 248Z" fill="#a84e2c"/><g stroke="#e28a5d" stroke-width="5"><path d="m148 154 98 87m-33-98 98 87m-33-98 98 87m-33-99 98 87m-33-98 98 87m-33-98 98 87m-33-99 98 87"/></g><g stroke="#0b3d2b" stroke-width="2" fill="none" marker-start="url(#a)" marker-end="url(#a)"><path d="M116 392H650M76 184l104 86"/></g><g fill="#0b3d2b" font-weight="700" font-size="22"><text x="333" y="425">10,00 m</text><text x="52" y="244" transform="rotate(-42 52 244)">3,50 m</text></g></svg></div><div class="spec"><span>✓ Cobertura com uma água</span><span>✓ Estrutura em madeira</span><span>✓ Telhas cerâmicas</span><span>✓ Acabamento e proteção</span></div><p class="note"><b>Imagem meramente ilustrativa.</b> A estrutura final poderá sofrer adequações técnicas conforme avaliação no local da obra.</p></article>
-<article class="slide" data-title="Como construiremos"><p class="ey">Processo organizado</p><h2>Como construiremos</h2><p class="lead">A estrutura será montada em etapas, com conferência de alinhamento, fixação e acabamento.</p><div class="diagram"><svg viewBox="0 0 720 300"><g fill="#8b512f"><rect x="110" y="160" width="18" height="120"/><rect x="290" y="128" width="18" height="152"/><rect x="470" y="96" width="18" height="184"/><rect x="180" y="200" width="16" height="80"/><rect x="360" y="168" width="16" height="112"/><rect x="540" y="136" width="16" height="144"/></g><g stroke="#8b512f" stroke-width="16"><path d="M100 158 480 90M170 198 550 130"/></g><g stroke="#9c5d35" stroke-width="8"><path d="m145 115 70 63m5-77 70 63m5-77 70 63m5-77 70 63m5-77 70 63"/></g><path d="M100 20 480-50 565 20 185 94Z" fill="#af5431"/></svg></div><div class="steps"><div class="step"><b>1</b><span><strong>Marcação e apoios</strong><small>Posicionamento dos mourões.</small></span></div><div class="step"><b>2</b><span><strong>Vigas principais</strong><small>Base estrutural e inclinação.</small></span></div><div class="step"><b>3</b><span><strong>Vigas secundárias e ripões</strong><small>Apoios para o telhamento.</small></span></div><div class="step"><b>4</b><span><strong>Telhas e acabamento</strong><small>Assentamento, revisão e proteção.</small></span></div></div></article>
-<article class="slide" data-title="Materiais"><p class="ey">Qualidade e durabilidade</p><h2>Materiais</h2><p class="lead">Materiais adequados para uma cobertura firme, protegida e com bom acabamento.</p><div class="materials"><div class="row"><span>▰</span><div><strong>Madeira aparelhada</strong><small>Vigas, pranchas, ripões e tabeiras.</small></div></div><div class="row"><span>⌂</span><div><strong>Telhas cerâmicas</strong><small>Telha romana resinada.</small></div></div><div class="row"><span>◉</span><div><strong>Fixação reforçada</strong><small>Pregos e conexões.</small></div></div><div class="row"><span>◒</span><div><strong>Proteção da madeira</strong><small>Verniz marítimo.</small></div></div></div></article>
-<article class="slide" data-title="Diferenciais"><p class="ey">Por que escolher a Aniceto</p><h2>Diferenciais</h2><div class="checks"><div class="row"><span>✓</span><div><strong>Estrutura planejada</strong><small>Execução organizada por etapas.</small></div></div><div class="row"><span>✓</span><div><strong>Madeira selecionada</strong><small>Materiais compatíveis com o serviço.</small></div></div><div class="row"><span>✓</span><div><strong>Acabamento profissional</strong><small>Cuidado com alinhamento e apresentação.</small></div></div><div class="row"><span>✓</span><div><strong>Atendimento direto</strong><small>Comunicação com o responsável.</small></div></div><div class="row"><span>✓</span><div><strong>Organização do local</strong><small>Revisão e limpeza ao final.</small></div></div></div></article>
-<article class="slide" data-title="Investimento"><p class="ey">Escolha a melhor opção</p><h2>Investimento</h2><p class="lead">Selecione a modalidade que deseja aprovar.</p><div class="budgets"><button class="budget sel" data-b="1"><i class="dot"></i><small>ORÇAMENTO 1</small><strong>Materiais + mão de obra</strong><em>R$ 13.500,00</em><p>Materiais: R$ 9.000,00<br>Mão de obra: R$ 4.500,00</p></button><button class="budget" data-b="2"><i class="dot"></i><small>ORÇAMENTO 2</small><strong>Apenas mão de obra</strong><em>R$ 4.500,00</em><p>Materiais comprados pelo cliente.</p></button></div><button class="btn outline" id="open">☷ Ver lista de materiais</button><p class="note" id="chosen">Selecionado: Orçamento 1 — materiais e mão de obra.</p></article>
-<article class="slide" data-title="Aprovação"><p class="ey">Pronto para começar?</p><h2>Vamos conversar</h2><p class="lead">Ao aprovar, você será direcionado ao WhatsApp para combinar os próximos detalhes.</p><div class="person"><img alt="Jailson Aniceto do Nascimento" src="data:image/jpeg;base64,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"><strong>Jailson Aniceto do Nascimento</strong><small>Responsável pela execução da obra</small></div><div class="summary"><small>SUA ESCOLHA</small><strong id="finalT">Orçamento 1 — materiais e mão de obra</strong><b id="finalV">R$ 13.500,00</b></div><button class="btn wa" id="approve">Aprovar proposta via WhatsApp</button><p class="note" style="text-align:center">A mensagem será preparada automaticamente conforme a opção escolhida.</p></article>
-</section>
-<nav class="nav"><button class="btn ghost" id="back" disabled>← Voltar</button><button class="btn primary" id="next">Próximo →</button></nav><footer class="foot">Proposta personalizada para André Luiz • 24/07/2026</footer>
-</main>
-<dialog class="dlg" id="dlg"><div class="handle"></div><header><div><p class="ey">Orçamento 2</p><h2>Lista de materiais</h2></div><button class="x" id="x">×</button></header><p class="lead" style="font-size:11px">Materiais a serem adquiridos pelo cliente. Sem valores.</p><ol class="list"><li><b>23</b><span>Vigas Cambará aparelhadas 5 × 11 cm, com 3,5 m</span></li><li><b>3</b><span>Vigas Cambará aparelhadas 5 × 15 cm, com 3,5 m</span></li><li><b>2</b><span>Pranchas Cambará aparelhadas 5 × 30 cm, com 5,5 m</span></li><li><b>630</b><span>Telhas de barro romana resinada</span></li><li><b>100 m</b><span>Ripão Cambará aparelhado 5 × 2 cm</span></li><li><b>3</b><span>Mourões tratados 18 × 20 cm, com 4 m</span></li><li><b>10</b><span>Tabeiras de cedro com 20 cm — seleção nº 02</span></li><li><b>1 kg</b><span>Pregos 17 × 21</span></li><li><b>10</b><span>Vigas Cambará aparelhadas 5 × 15 cm, com 1 m</span></li><li><b>1 kg</b><span>Pregos 25 × 72</span></li><li><b>2</b><span>Galões de verniz marítimo Eucatex, 3,6 L</span></li></ol><button class="btn primary" style="width:100%" id="close">Fechar</button></dialog>
-<script>
-(()=>{const s=[...document.querySelectorAll('.slide')],back=document.querySelector('#back'),next=document.querySelector('#next'),lab=document.querySelector('#lab'),ttl=document.querySelector('#ttl'),bar=document.querySelector('#bar'),dlg=document.querySelector('#dlg');let i=0,b='1';const d={'1':{t:'Orçamento 1 — materiais e mão de obra',v:'R$ 13.500,00',m:'Olá, Jailson! Aqui é André Luiz. Analisei e aprovei o orçamento 1, com materiais e mão de obra, e gostaria de fechar o serviço e acordar os detalhes.'},'2':{t:'Orçamento 2 — apenas mão de obra',v:'R$ 4.500,00',m:'Olá, Jailson! Aqui é André Luiz. Analisei e aprovei o orçamento 2, apenas mão de obra e materiais por minha conta, e gostaria de fechar o serviço e acordar os detalhes.'}};function u(){s.forEach((x,n)=>x.classList.toggle('active',n===i));lab.textContent=`Etapa ${i+1} de 8`;ttl.textContent=s[i].dataset.title;bar.style.width=`${(i+1)*12.5}%`;back.disabled=i===0;next.style.visibility=i===7?'hidden':'visible';next.textContent=i===6?'Finalizar →':'Próximo →'}function go(n){if(n>=0&&n<8){i=n;u()}}document.querySelector('.go').onclick=()=>go(1);back.onclick=()=>go(i-1);next.onclick=()=>go(i+1);document.querySelectorAll('.budget').forEach(x=>x.onclick=()=>{b=x.dataset.b;document.querySelectorAll('.budget').forEach(y=>y.classList.toggle('sel',y===x));document.querySelector('#chosen').textContent='Selecionado: '+d[b].t+'.';document.querySelector('#finalT').textContent=d[b].t;document.querySelector('#finalV').textContent=d[b].v});document.querySelector('#open').onclick=()=>dlg.showModal();document.querySelector('#x').onclick=()=>dlg.close();document.querySelector('#close').onclick=()=>dlg.close();document.querySelector('#approve').onclick=()=>location.href='https://wa.me/5581986658891?text='+encodeURIComponent(d[b].m);let x=0;document.querySelector('.slides').addEventListener('touchstart',e=>x=e.changedTouches[0].screenX,{passive:true});document.querySelector('.slides').addEventListener('touchend',e=>{let z=e.changedTouches[0].screenX-x;if(Math.abs(z)>70)go(i+(z<0?1:-1))},{passive:true});u()})();
-</script>
-</body></html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1b3d2a">
+    <meta
+      name="description"
+      content="Proposta comercial personalizada da Aniceto para André Luiz."
+    >
+    <title>Proposta para André Luiz | Aniceto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <svg class="svg-library" aria-hidden="true">
+      <symbol id="icon-logo" viewBox="0 0 64 40">
+        <path d="M5 31 28 7l10 9-6 6-4-4-14 14z" fill="currentColor"></path>
+        <path d="m21 34 20-20 18 18H48l-7-7-9 9z" fill="#d4af37"></path>
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24">
+        <path d="m3 11 9-8 9 8"></path>
+        <path d="M5 10v10h14V10"></path>
+        <path d="M9 20v-6h6v6"></path>
+      </symbol>
+      <symbol id="icon-tool" viewBox="0 0 24 24">
+        <path d="M14.7 6.3a4 4 0 0 0-5-5L12 3.6 8.6 7 6.3 4.7a4 4 0 0 0 5 5L4 17.3A2.1 2.1 0 0 0 6.7 20l7.6-7.6a4 4 0 0 0 5-5L17 9.7 13.6 6.3 16 4a4 4 0 0 0-1.3 2.3Z"></path>
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path>
+        <path d="m9 12 2 2 4-4"></path>
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M12 7v5l3 2"></path>
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M22 21v-2a4 4 0 0 0-3-3.9"></path>
+        <path d="M16 3.1a4 4 0 0 1 0 7.8"></path>
+      </symbol>
+      <symbol id="icon-wood" viewBox="0 0 24 24">
+        <path d="M4 5h16v14H4z"></path>
+        <path d="M4 10h16M8 5v14M16 5v14"></path>
+      </symbol>
+      <symbol id="icon-tile" viewBox="0 0 24 24">
+        <path d="M3 10 12 3l9 7"></path>
+        <path d="M5 9v11h14V9"></path>
+        <path d="m8 7 8 13M13 4l7 11"></path>
+      </symbol>
+      <symbol id="icon-fastener" viewBox="0 0 24 24">
+        <circle cx="8" cy="8" r="4"></circle>
+        <path d="m11 11 9 9M15 13l-2 2M18 16l-2 2"></path>
+      </symbol>
+      <symbol id="icon-protection" viewBox="0 0 24 24">
+        <path d="M12 3c3 4 6 6.8 6 11a6 6 0 0 1-12 0c0-4.2 3-7 6-11Z"></path>
+        <path d="M9 15c.5 1.5 1.5 2 3 2"></path>
+      </symbol>
+      <symbol id="icon-list" viewBox="0 0 24 24">
+        <path d="M8 6h13M8 12h13M8 18h13"></path>
+        <path d="M3 6h.01M3 12h.01M3 18h.01"></path>
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </symbol>
+      <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+        <path d="M19 12H5M11 18l-6-6 6-6"></path>
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6"></path>
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.7A8.5 8.5 0 1 1 20.5 11.7Z"></path>
+        <path d="M8.3 7.6c.2-.5.4-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.9c.1.3.1.5-.1.7l-.6.7c-.2.2-.1.4 0 .6.7 1.3 1.7 2.3 3 3 .2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .4-.2 1.4-.8 1.9-.6.5-1.3.8-2.2.6-1.3-.2-3.1-1-4.8-2.5-1.3-1.2-2.4-2.7-2.8-4.1-.4-1.3 0-2.3.4-2.9Z"></path>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18"></path>
+      </symbol>
+    </svg>
+
+    <main class="proposal-app" id="proposalApp">
+      <header class="app-header" aria-label="Progresso da apresentação">
+        <a class="brand" href="#etapa-1" aria-label="Aniceto — voltar ao início">
+          <svg aria-hidden="true"><use href="#icon-logo"></use></svg>
+          <span>
+            <strong>ANICETO</strong>
+            <small>Estruturas • Coberturas • Empreitadas</small>
+          </span>
+        </a>
+        <div class="progress">
+          <div class="progress-meta">
+            <span id="stepLabel">Etapa 1 de 8</span>
+            <span id="stepTitle">Boas-vindas</span>
+          </div>
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Progresso da apresentação"
+            aria-valuemin="1"
+            aria-valuemax="8"
+            aria-valuenow="1"
+          >
+            <span id="progressBar"></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="screens" id="screens">
+        <section
+          class="screen hero-screen is-active"
+          id="etapa-1"
+          data-title="Boas-vindas"
+          aria-labelledby="title-1"
+        >
+          <svg
+            class="hero-illustration"
+            viewBox="0 0 820 980"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            aria-label="Ilustração de uma cobertura de uma água em madeira e telhas cerâmicas"
+          >
+            <defs>
+              <linearGradient id="hero-sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#bfd7e2"></stop>
+                <stop offset="0.72" stop-color="#edf1ea"></stop>
+                <stop offset="1" stop-color="#b6c4b0"></stop>
+              </linearGradient>
+              <linearGradient id="hero-wood" x1="0" x2="1">
+                <stop stop-color="#573521"></stop>
+                <stop offset="0.5" stop-color="#8b5837"></stop>
+                <stop offset="1" stop-color="#4b2d1c"></stop>
+              </linearGradient>
+              <linearGradient id="hero-tile" x1="0" x2="1">
+                <stop stop-color="#8d3f25"></stop>
+                <stop offset="0.55" stop-color="#bb5c35"></stop>
+                <stop offset="1" stop-color="#74351f"></stop>
+              </linearGradient>
+            </defs>
+            <rect width="820" height="980" fill="url(#hero-sky)"></rect>
+            <path d="M0 750Q180 670 390 735T820 710V980H0Z" fill="#718a69"></path>
+            <ellipse cx="426" cy="767" rx="314" ry="52" fill="#102b20" opacity=".2"></ellipse>
+            <g fill="url(#hero-wood)">
+              <path d="M128 330h28v424h-28zM326 295h28v459h-28zM526 259h28v495h-28zM674 231h28v523h-28z"></path>
+              <path d="M212 434h24v320h-24zM412 398h24v356h-24zM610 363h24v391h-24z"></path>
+              <path d="m109 317 582-105 18 28-586 108zM196 419 717 324l17 27-524 97z"></path>
+            </g>
+            <path d="m96 297 590-108 112 104-592 110Z" fill="url(#hero-tile)"></path>
+            <g stroke="#d7855f" stroke-width="7" opacity=".85">
+              <path d="m147 288 110 105m-38-118 110 105m-38-118 110 105m-38-118 110 105m-38-118 110 105m-38-118 110 105m-38-118 110 105m-38-118 110 105"></path>
+            </g>
+          </svg>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <p class="eyebrow">Proposta personalizada</p>
+            <h1 id="title-1" tabindex="-1">Olá, André Luiz.</h1>
+            <p class="hero-lead">
+              Preparamos uma proposta clara e exclusiva para sua cobertura.
+            </p>
+            <dl class="hero-facts">
+              <div>
+                <svg aria-hidden="true"><use href="#icon-home"></use></svg>
+                <dt>Serviço</dt>
+                <dd>Cobertura</dd>
+              </div>
+              <div>
+                <svg aria-hidden="true"><use href="#icon-tool"></use></svg>
+                <dt>Medidas</dt>
+                <dd>10,00 m × 3,50 m</dd>
+              </div>
+              <div>
+                <svg aria-hidden="true"><use href="#icon-tile"></use></svg>
+                <dt>Modelo</dt>
+                <dd>Uma água</dd>
+              </div>
+            </dl>
+            <button class="button button-gold hero-cta" id="startButton" type="button">
+              <span>Começar apresentação</span>
+              <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </button>
+            <p class="proposal-date">Proposta personalizada • 24/07/2026</p>
+          </div>
+        </section>
+
+        <section class="screen" id="etapa-2" data-title="Quem somos" aria-labelledby="title-2" hidden>
+          <div class="screen-content">
+            <p class="eyebrow">Confiança em cada etapa</p>
+            <h2 id="title-2" tabindex="-1">Quem somos</h2>
+            <p class="lead">
+              A Aniceto trabalha com estruturas, coberturas e empreitadas, unindo
+              experiência prática, cuidado e compromisso.
+            </p>
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-tool"></use></svg></span>
+                <h3>Experiência prática</h3>
+                <p>Execução orientada por quem conhece a obra.</p>
+              </article>
+              <article class="info-card">
+                <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-shield"></use></svg></span>
+                <h3>Materiais de qualidade</h3>
+                <p>Seleção adequada ao serviço contratado.</p>
+              </article>
+              <article class="info-card">
+                <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-users"></use></svg></span>
+                <h3>Atendimento direto</h3>
+                <p>Contato com o responsável pela execução.</p>
+              </article>
+              <article class="info-card">
+                <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-clock"></use></svg></span>
+                <h3>Compromisso</h3>
+                <p>Organização, transparência e cuidado com os prazos.</p>
+              </article>
+            </div>
+            <blockquote>
+              “Sua obra será executada com o mesmo cuidado que teríamos em nossa
+              própria casa.”
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="screen" id="etapa-3" data-title="Sua obra" aria-labelledby="title-3" hidden>
+          <div class="screen-content work-screen">
+            <p class="eyebrow">Entendemos sua necessidade</p>
+            <h2 id="title-3" tabindex="-1">Sua obra</h2>
+            <p class="lead">
+              Cobertura de aproximadamente <strong>10,00 m × 3,50 m</strong>, com
+              uma única queda d’água.
+            </p>
+            <figure class="roof-figure">
+              <svg
+                viewBox="0 0 760 430"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-labelledby="roofTitle roofDescription"
+              >
+                <title id="roofTitle">Cobertura de uma água</title>
+                <desc id="roofDescription">
+                  Ilustração conceitual de cobertura com apoios distribuídos,
+                  estrutura em madeira, telhas cerâmicas e medidas de 10 por 3,5 metros.
+                </desc>
+                <defs>
+                  <linearGradient id="roof-wood" x1="0" x2="1">
+                    <stop stop-color="#5e351f"></stop>
+                    <stop offset=".5" stop-color="#a06439"></stop>
+                    <stop offset="1" stop-color="#59321e"></stop>
+                  </linearGradient>
+                  <linearGradient id="roof-tiles" x1="0" x2="1">
+                    <stop stop-color="#8e3d22"></stop>
+                    <stop offset=".55" stop-color="#b95a32"></stop>
+                    <stop offset="1" stop-color="#77341e"></stop>
+                  </linearGradient>
+                  <marker id="dimension-arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0 0 8 4 0 8z" fill="#1b3d2a"></path>
+                  </marker>
+                </defs>
+                <ellipse cx="390" cy="349" rx="304" ry="40" fill="#1b3d2a" opacity=".08"></ellipse>
+                <g fill="url(#roof-wood)">
+                  <path d="M105 185h24v164h-24zM270 156h24v193h-24zM435 126h24v223h-24zM600 97h24v252h-24z"></path>
+                  <path d="M178 252h21v101h-21zM343 222h21v131h-21zM508 193h21v160h-21zM673 163h21v190h-21z"></path>
+                  <path d="m91 176 526-94 15 22-528 96zM165 244l526-95 15 22-528 97z"></path>
+                </g>
+                <path d="M80 160 612 65l103 83-533 98Z" fill="url(#roof-tiles)"></path>
+                <g stroke="#e28a5d" stroke-width="5" opacity=".9">
+                  <path d="m120 153 101 85m-35-97 101 85m-35-97 101 85m-35-97 101 85m-35-97 101 85m-35-97 101 85m-35-97 101 85m-35-97 101 85"></path>
+                </g>
+                <g
+                  stroke="#1b3d2a"
+                  stroke-width="2"
+                  fill="none"
+                  marker-start="url(#dimension-arrow)"
+                  marker-end="url(#dimension-arrow)"
+                >
+                  <path d="M98 391H694"></path>
+                  <path d="m47 185 105 86"></path>
+                </g>
+                <g fill="#1b3d2a" font-family="Manrope, sans-serif" font-weight="800" font-size="22">
+                  <text x="344" y="420">10,00 m</text>
+                  <text x="35" y="258" transform="rotate(-40 35 258)">3,50 m</text>
+                </g>
+              </svg>
+            </figure>
+            <ul class="feature-chips" aria-label="Características da cobertura">
+              <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>Cobertura com uma água</li>
+              <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>Estrutura em madeira</li>
+              <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>Telhas cerâmicas</li>
+              <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>Acabamento e proteção</li>
+            </ul>
+            <p class="illustration-note">
+              <strong>Imagem meramente ilustrativa.</strong> A estrutura final poderá
+              sofrer adequações técnicas conforme avaliação no local da obra.
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="screen"
+          id="etapa-4"
+          data-title="Como construiremos"
+          aria-labelledby="title-4"
+          hidden
+        >
+          <div class="screen-content build-screen">
+            <p class="eyebrow">Processo organizado</p>
+            <h2 id="title-4" tabindex="-1">Como construiremos</h2>
+            <p class="lead">
+              A estrutura será montada em etapas, com conferência de alinhamento,
+              fixação e acabamento.
+            </p>
+            <figure class="exploded-figure">
+              <svg
+                viewBox="0 0 720 360"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-label="Representação conceitual em camadas dos apoios, vigas, ripões e telhas"
+              >
+                <defs>
+                  <linearGradient id="exploded-wood" x1="0" x2="1">
+                    <stop stop-color="#59321e"></stop>
+                    <stop offset=".5" stop-color="#9c6039"></stop>
+                    <stop offset="1" stop-color="#51301e"></stop>
+                  </linearGradient>
+                  <linearGradient id="exploded-tile" x1="0" x2="1">
+                    <stop stop-color="#8d3e24"></stop>
+                    <stop offset=".55" stop-color="#b85a34"></stop>
+                    <stop offset="1" stop-color="#73321d"></stop>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="365" cy="328" rx="282" ry="27" fill="#1b3d2a" opacity=".08"></ellipse>
+                <g fill="url(#exploded-wood)">
+                  <path d="M98 228h18v98H98zM260 200h18v126h-18zM422 171h18v155h-18zM584 143h18v183h-18z"></path>
+                  <path d="M167 266h16v62h-16zM329 237h16v91h-16zM491 209h16v119h-16zM653 180h16v148h-16z"></path>
+                </g>
+                <g stroke="url(#exploded-wood)" stroke-width="15" stroke-linecap="round">
+                  <path d="m86 202 511-91"></path>
+                  <path d="m155 240 511-91"></path>
+                </g>
+                <g stroke="#a96b43" stroke-width="7" stroke-linecap="round">
+                  <path d="m126 151 88 75m-28-86 88 75m-28-86 88 75m-28-86 88 75m-28-86 88 75m-28-86 88 75m-28-86 88 75m-28-86 88 75"></path>
+                </g>
+                <path d="m78 46 517-92 103 82-520 96Z" fill="url(#exploded-tile)"></path>
+                <g stroke="#dd845d" stroke-width="5" opacity=".85">
+                  <path d="m120 38 98 84m-36-95 98 84m-36-95 98 84m-36-95 98 84m-36-95 98 84m-36-95 98 84m-36-95 98 84m-36-95 98 84"></path>
+                </g>
+              </svg>
+              <figcaption>Representação conceitual em camadas</figcaption>
+            </figure>
+            <ol class="process-list">
+              <li>
+                <span>1</span>
+                <div><strong>Marcação e apoios</strong><small>Posicionamento e preparação dos pontos de sustentação.</small></div>
+              </li>
+              <li>
+                <span>2</span>
+                <div><strong>Vigas principais</strong><small>Montagem da base estrutural e definição da inclinação.</small></div>
+              </li>
+              <li>
+                <span>3</span>
+                <div><strong>Vigas secundárias e ripões</strong><small>Preparação dos apoios para o telhamento.</small></div>
+              </li>
+              <li>
+                <span>4</span>
+                <div><strong>Telhas e acabamento</strong><small>Assentamento, revisão, proteção e organização final.</small></div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="screen" id="etapa-5" data-title="Materiais" aria-labelledby="title-5" hidden>
+          <div class="screen-content">
+            <p class="eyebrow">Qualidade e durabilidade</p>
+            <h2 id="title-5" tabindex="-1">Materiais</h2>
+            <p class="lead">
+              Materiais adequados para uma cobertura firme, protegida e com bom acabamento.
+            </p>
+            <div class="material-grid">
+              <article class="material-card">
+                <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-wood"></use></svg></span>
+                <h3>Madeira aparelhada</h3>
+                <p>Vigas, pranchas, ripões e tabeiras.</p>
+              </article>
+              <article class="material-card">
+                <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-tile"></use></svg></span>
+                <h3>Telhas cerâmicas</h3>
+                <p>Telha romana resinada.</p>
+              </article>
+              <article class="material-card">
+                <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-fastener"></use></svg></span>
+                <h3>Fixação reforçada</h3>
+                <p>Pregos e conexões adequados à montagem.</p>
+              </article>
+              <article class="material-card">
+                <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-protection"></use></svg></span>
+                <h3>Proteção da madeira</h3>
+                <p>Aplicação de verniz marítimo.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="screen"
+          id="etapa-6"
+          data-title="Diferenciais"
+          aria-labelledby="title-6"
+          hidden
+        >
+          <div class="screen-content">
+            <p class="eyebrow">Por que escolher a Aniceto</p>
+            <h2 id="title-6" tabindex="-1">Diferenciais</h2>
+            <ul class="difference-list">
+              <li>
+                <span class="check-badge"><svg aria-hidden="true"><use href="#icon-check"></use></svg></span>
+                <div><strong>Estrutura planejada</strong><small>Execução organizada por etapas.</small></div>
+              </li>
+              <li>
+                <span class="check-badge"><svg aria-hidden="true"><use href="#icon-check"></use></svg></span>
+                <div><strong>Madeira selecionada</strong><small>Materiais compatíveis com o serviço.</small></div>
+              </li>
+              <li>
+                <span class="check-badge"><svg aria-hidden="true"><use href="#icon-check"></use></svg></span>
+                <div><strong>Acabamento profissional</strong><small>Cuidado com alinhamento e apresentação.</small></div>
+              </li>
+              <li class="featured-difference">
+                <span class="check-badge"><svg aria-hidden="true"><use href="#icon-check"></use></svg></span>
+                <div><strong>Atendimento direto com Jailson</strong><small>Comunicação com o responsável pela execução.</small></div>
+              </li>
+              <li>
+                <span class="check-badge"><svg aria-hidden="true"><use href="#icon-check"></use></svg></span>
+                <div><strong>Organização do local</strong><small>Revisão e limpeza ao final.</small></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section
+          class="screen"
+          id="etapa-7"
+          data-title="Investimento"
+          aria-labelledby="title-7"
+          hidden
+        >
+          <div class="screen-content investment-screen">
+            <p class="eyebrow">Escolha a melhor opção</p>
+            <h2 id="title-7" tabindex="-1">Investimento</h2>
+            <p class="lead">Selecione a modalidade que deseja aprovar.</p>
+            <div class="budget-list" role="group" aria-label="Opções de orçamento">
+              <button
+                class="budget-card"
+                type="button"
+                data-budget="1"
+                aria-pressed="false"
+              >
+                <span class="budget-radio" aria-hidden="true"></span>
+                <span class="budget-label">Orçamento 1</span>
+                <strong>Materiais + mão de obra</strong>
+                <b>R$ 13.500,00</b>
+                <span class="budget-details">
+                  Materiais: R$ 9.000,00<br>
+                  Mão de obra: R$ 4.500,00<br>
+                  Tudo incluso para maior praticidade.
+                </span>
+              </button>
+              <button
+                class="budget-card"
+                type="button"
+                data-budget="2"
+                aria-pressed="false"
+              >
+                <span class="budget-radio" aria-hidden="true"></span>
+                <span class="budget-label">Orçamento 2</span>
+                <strong>Apenas mão de obra</strong>
+                <b>R$ 4.500,00</b>
+                <span class="budget-details">Materiais adquiridos pelo cliente.</span>
+              </button>
+            </div>
+            <button class="button button-outline" id="materialsButton" type="button" hidden>
+              <svg aria-hidden="true"><use href="#icon-list"></use></svg>
+              <span>Ver lista de materiais</span>
+            </button>
+            <p class="selection-status" id="selectionStatus" aria-live="polite">
+              Nenhuma opção selecionada.
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="screen"
+          id="etapa-8"
+          data-title="Aprovação"
+          aria-labelledby="title-8"
+          hidden
+        >
+          <div class="screen-content approval-screen">
+            <p class="eyebrow">Pronto para começar?</p>
+            <h2 id="title-8" tabindex="-1">Vamos conversar</h2>
+            <p class="lead">
+              Ao aprovar, você será direcionado ao WhatsApp para combinar os próximos detalhes.
+            </p>
+            <div class="person-card">
+              <img
+                class="person-photo"
+                src="/assets/jailson-aniceto.png"
+                alt="Jailson Aniceto do Nascimento"
+                width="180"
+                height="180"
+              >
+              <div>
+                <strong>Jailson Aniceto do Nascimento</strong>
+                <span>Responsável pela execução da obra</span>
+              </div>
+            </div>
+            <div class="choice-summary" aria-live="polite">
+              <span>Sua escolha</span>
+              <strong id="finalBudgetTitle"></strong>
+              <b id="finalBudgetValue"></b>
+            </div>
+            <a
+              class="button whatsapp-button"
+              id="whatsappButton"
+              href="#"
+              aria-disabled="true"
+              rel="noopener"
+            >
+              <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+              <span>
+                <strong>Falar com Jailson pelo WhatsApp</strong>
+                <small>Aprovar proposta e combinar os detalhes</small>
+              </span>
+            </a>
+            <p class="final-date">Proposta para André Luiz • 24/07/2026</p>
+          </div>
+        </section>
+      </div>
+
+      <nav class="app-navigation" id="appNavigation" aria-label="Navegação da apresentação" hidden>
+        <button class="button back-button" id="backButton" type="button">
+          <svg aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+          <span>Voltar</span>
+        </button>
+        <button class="button button-gold next-button" id="nextButton" type="button">
+          <span>Próximo</span>
+          <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+        </button>
+      </nav>
+    </main>
+
+    <dialog class="materials-dialog" id="materialsDialog" aria-labelledby="materialsTitle">
+      <div class="dialog-handle" aria-hidden="true"></div>
+      <header>
+        <div>
+          <p class="eyebrow">Orçamento 2</p>
+          <h2 id="materialsTitle">Lista de materiais</h2>
+        </div>
+        <button class="icon-button" id="dialogCloseIcon" type="button" aria-label="Fechar lista de materiais">
+          <svg aria-hidden="true"><use href="#icon-close"></use></svg>
+        </button>
+      </header>
+      <p class="dialog-subtitle">Materiais a serem adquiridos pelo cliente. Sem valores.</p>
+      <ol class="material-list">
+        <li><strong>23</strong><span>Vigas Cambará aparelhadas 5 × 11 cm, com 3,5 m</span></li>
+        <li><strong>3</strong><span>Vigas Cambará aparelhadas 5 × 15 cm, com 3,5 m</span></li>
+        <li><strong>2</strong><span>Pranchas Cambará aparelhadas 5 × 30 cm, com 5,5 m</span></li>
+        <li><strong>630</strong><span>Telhas de barro romana resinada</span></li>
+        <li><strong>100 m</strong><span>Ripão Cambará aparelhado 5 × 2 cm</span></li>
+        <li><strong>3</strong><span>Mourões tratados 18 × 20 cm, com 4 m</span></li>
+        <li><strong>10</strong><span>Tabeiras de cedro com 20 cm — seleção nº 02</span></li>
+        <li><strong>1 kg</strong><span>Pregos 17 × 21</span></li>
+        <li><strong>10</strong><span>Vigas Cambará aparelhadas 5 × 15 cm, com 1 m</span></li>
+        <li><strong>1 kg</strong><span>Pregos 25 × 72</span></li>
+        <li><strong>2</strong><span>Galões de verniz marítimo Eucatex, 3,6 L</span></li>
+      </ol>
+      <button class="button button-primary dialog-close" id="dialogCloseButton" type="button">
+        Fechar
+      </button>
+    </dialog>
+  </body>
+</html>
