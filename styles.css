@@ -1523,3 +1523,537 @@ blockquote {
     min-height: 170px;
   }
 }
+
+/* Revisão final de acessibilidade, equilíbrio visual e identidade da marca */
+body {
+  font-size: 18px;
+}
+
+.app-header {
+  min-height: 84px;
+  padding: calc(10px + env(safe-area-inset-top)) 14px 10px;
+  gap: 12px;
+}
+
+.brand {
+  flex: 0 0 194px;
+  min-width: 194px;
+  min-height: 52px;
+  gap: 8px;
+}
+
+.brand > svg {
+  width: 42px;
+  height: 34px;
+}
+
+.brand strong {
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.075em;
+}
+
+.brand small {
+  display: block;
+  max-width: 144px;
+  margin-top: 5px;
+  overflow: visible;
+  color: #5b6861;
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.progress-meta {
+  gap: 5px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.progress-meta span:last-child {
+  text-align: right;
+}
+
+.progress-track {
+  height: 7px;
+}
+
+.screen-content {
+  padding: 26px 20px 30px;
+}
+
+.eyebrow {
+  margin-bottom: 9px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-size: clamp(40px, 10.7vw, 48px);
+  line-height: 1.05;
+}
+
+h2 {
+  margin-bottom: 13px;
+  font-size: clamp(36px, 9.5vw, 43px);
+  line-height: 1.08;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.58;
+}
+
+.button {
+  min-height: 64px;
+  padding-inline: 20px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.hero-media {
+  flex-basis: clamp(220px, 34dvh, 300px);
+}
+
+.hero-media figcaption {
+  padding: 9px 13px;
+  font-size: 15px;
+}
+
+.hero-content {
+  padding: 28px 20px max(28px, env(safe-area-inset-bottom));
+}
+
+.hero-lead {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.hero-facts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.hero-facts > div,
+.hero-facts > div:nth-child(2) {
+  display: flex;
+  min-height: 94px;
+  grid-column: auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.hero-facts svg {
+  display: none;
+}
+
+.hero-facts dt {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero-facts dd {
+  margin-top: 6px;
+  overflow: visible;
+  font-size: 17px;
+  line-height: 1.3;
+  white-space: normal;
+  text-overflow: clip;
+}
+
+.proposal-date,
+.final-date {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.card-grid,
+.material-grid {
+  gap: 12px;
+  margin-block: 20px;
+}
+
+.info-card,
+.material-card {
+  min-height: 196px;
+  padding: 18px;
+}
+
+.icon-badge {
+  width: 44px;
+  height: 44px;
+}
+
+.icon-badge svg {
+  width: 26px;
+  height: 26px;
+}
+
+.info-card h3,
+.material-card h3 {
+  margin: 14px 0 8px;
+  font-size: 20px;
+  line-height: 1.32;
+}
+
+.info-card p,
+.material-card p {
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+blockquote {
+  margin-top: 18px;
+  padding: 20px;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.roof-figure.work-photo-card {
+  margin-block: 17px 20px;
+}
+
+.work-photo-card figcaption {
+  right: 18px;
+  bottom: 16px;
+  left: 18px;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.work-photo-card figcaption strong {
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.detail-gallery {
+  gap: 12px;
+  margin: 18px 0 20px;
+}
+
+.detail-photo-card figcaption {
+  right: 13px;
+  bottom: 13px;
+  left: 13px;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.feature-chips {
+  gap: 10px;
+}
+
+.feature-chips li {
+  min-height: 58px;
+  padding: 12px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.feature-chips svg {
+  width: 20px;
+  height: 20px;
+}
+
+.illustration-note {
+  margin-top: 16px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.process-list,
+.difference-list {
+  gap: 12px;
+}
+
+.process-list li,
+.difference-list li {
+  min-height: 82px;
+  gap: 13px;
+  padding: 14px 15px;
+}
+
+.process-list > li > span,
+.check-badge {
+  width: 38px;
+  height: 38px;
+}
+
+.process-list > li > span {
+  font-size: 17px;
+}
+
+.check-badge svg {
+  width: 20px;
+  height: 20px;
+}
+
+.process-list strong,
+.difference-list strong {
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.process-list small,
+.difference-list small {
+  margin-top: 5px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.difference-list {
+  margin-top: 20px;
+}
+
+.material-card {
+  min-height: 196px;
+}
+
+.budget-list {
+  gap: 13px;
+  margin: 17px 0 14px;
+}
+
+.budget-card {
+  min-height: 174px;
+  padding: 18px 56px 18px 18px;
+}
+
+.budget-radio {
+  top: 19px;
+  right: 17px;
+  width: 26px;
+  height: 26px;
+}
+
+.budget-label {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.budget-card > strong {
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.budget-card > b {
+  margin-block: 7px;
+  font-size: 32px;
+}
+
+.budget-details {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.selection-status {
+  min-height: 25px;
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.person-card {
+  gap: 17px;
+  margin: 20px 0 17px;
+  padding: 15px;
+}
+
+.person-card strong {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.person-card span {
+  margin-top: 7px;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.choice-summary {
+  padding: 17px 18px;
+}
+
+.choice-summary span {
+  font-size: 15px;
+}
+
+.choice-summary strong {
+  margin-block: 7px 5px;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.choice-summary b {
+  font-size: 32px;
+}
+
+.whatsapp-button {
+  min-height: 74px;
+  margin-top: 15px;
+}
+
+.whatsapp-button small {
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.app-navigation {
+  min-height: 82px;
+  gap: 10px;
+  padding: 10px 15px calc(10px + env(safe-area-inset-bottom));
+}
+
+.back-button {
+  min-width: 116px;
+}
+
+.materials-dialog {
+  height: min(90dvh, 780px);
+  padding-inline: 20px;
+}
+
+.materials-dialog h2 {
+  font-size: 36px;
+}
+
+.dialog-subtitle,
+.material-list li {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.material-list {
+  max-height: calc(90dvh - 250px - env(safe-area-inset-bottom));
+}
+
+.material-list li {
+  grid-template-columns: 64px 1fr;
+  padding-block: 13px;
+}
+
+@media (max-width: 430px) {
+  .app-header {
+    gap: 9px;
+    padding-inline: 11px;
+  }
+
+  .brand {
+    flex-basis: 178px;
+    min-width: 178px;
+  }
+
+  .brand > svg {
+    width: 39px;
+  }
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand small {
+    max-width: 130px;
+    font-size: 7.5px;
+  }
+
+  .progress-meta {
+    display: grid;
+    justify-items: end;
+    gap: 2px;
+    font-size: 13px;
+  }
+
+  .screen-content {
+    padding-inline: 18px;
+  }
+
+  .hero-content {
+    padding-inline: 18px;
+  }
+}
+
+@media (max-width: 370px) {
+  .app-header {
+    min-height: 80px;
+  }
+
+  .brand {
+    flex-basis: 164px;
+    min-width: 164px;
+    gap: 6px;
+  }
+
+  .brand > svg {
+    width: 35px;
+  }
+
+  .brand strong {
+    font-size: 14px;
+  }
+
+  .brand small {
+    max-width: 120px;
+    font-size: 7px;
+  }
+
+  .screen-content,
+  .hero-content {
+    padding-inline: 16px;
+  }
+
+  .hero-facts {
+    gap: 7px;
+  }
+
+  .hero-facts > div,
+  .hero-facts > div:nth-child(2) {
+    min-height: 92px;
+    padding-inline: 6px;
+  }
+
+  .hero-facts dt {
+    font-size: 13px;
+  }
+
+  .hero-facts dd {
+    font-size: 16px;
+  }
+
+  .info-card,
+  .material-card {
+    padding: 15px;
+  }
+
+  .info-card h3,
+  .material-card h3 {
+    font-size: 19px;
+  }
+
+  .info-card p,
+  .material-card p {
+    font-size: 17px;
+  }
+}
+
+@media (max-height: 740px) {
+  .hero-media {
+    flex-basis: 190px;
+    min-height: 180px;
+  }
+}
