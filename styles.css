@@ -1097,3 +1097,429 @@ blockquote {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Galeria de obras reais e leitura ampliada */
+.app-header {
+  min-height: 74px;
+}
+
+.brand {
+  min-width: 108px;
+}
+
+.brand strong {
+  font-size: 15px;
+}
+
+.brand small {
+  display: none;
+}
+
+.progress-meta {
+  font-size: 13px;
+}
+
+.progress-meta span:first-child {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.eyebrow {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: clamp(36px, 10vw, 42px);
+}
+
+h2 {
+  font-size: clamp(32px, 8.4vw, 38px);
+}
+
+h3 {
+  font-size: 17px;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.button {
+  min-height: 58px;
+  font-size: 16px;
+}
+
+.hero-screen.is-active {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: var(--verde-profundo);
+}
+
+.hero-media {
+  position: relative;
+  flex: 0 0 clamp(220px, 38dvh, 330px);
+  min-height: 220px;
+  margin: 0;
+  overflow: hidden;
+  background: #193425;
+}
+
+.hero-media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(180deg, rgb(6 28 19 / 8%) 35%, rgb(6 28 19 / 78%) 100%),
+    linear-gradient(90deg, rgb(6 28 19 / 18%), transparent 55%);
+  pointer-events: none;
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 24%;
+  filter: saturate(0.94) contrast(1.04);
+  transform: scale(1.015);
+}
+
+.hero-media figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 18px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 11px;
+  color: var(--branco);
+  background: rgb(8 37 25 / 78%);
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 20%);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  backdrop-filter: blur(8px);
+}
+
+.hero-media figcaption span {
+  width: 8px;
+  height: 8px;
+  background: var(--dourado-claro);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgb(235 207 114 / 16%);
+}
+
+.hero-overlay {
+  display: none;
+}
+
+.hero-content {
+  position: relative;
+  inset: auto;
+  flex: 1 0 auto;
+  padding: 25px 22px max(24px, env(safe-area-inset-bottom));
+  overflow: visible;
+  background:
+    radial-gradient(circle at 100% 0, rgb(212 175 55 / 12%), transparent 38%),
+    var(--verde-profundo);
+}
+
+.hero-lead {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-facts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hero-facts > div {
+  min-height: 68px;
+  padding: 12px 10px 11px 39px;
+}
+
+.hero-facts > div:nth-child(2) {
+  grid-column: 1 / -1;
+}
+
+.hero-facts svg {
+  top: 16px;
+  left: 11px;
+  width: 21px;
+  height: 21px;
+}
+
+.hero-facts dt {
+  font-size: 13px;
+}
+
+.hero-facts dd {
+  font-size: 15px;
+}
+
+.proposal-date,
+.final-date {
+  font-size: 13px;
+}
+
+.info-card,
+.material-card {
+  padding: 16px;
+}
+
+.info-card h3,
+.material-card h3 {
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+.info-card p,
+.material-card p {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+blockquote {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.roof-figure.work-photo-card {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  margin-block: 14px 16px;
+  padding: 0;
+  overflow: hidden;
+  border-color: rgb(212 175 55 / 52%);
+  box-shadow: 0 16px 34px rgb(11 61 43 / 14%);
+}
+
+.work-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-photo-structure {
+  object-position: 50% 34%;
+}
+
+.work-photo-madeiramento {
+  object-position: 50% 28%;
+}
+
+.work-photo-acabamento {
+  object-position: 51% 27%;
+}
+
+.work-photo-card::after,
+.detail-photo-card::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 52%;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgb(4 25 16 / 86%));
+  pointer-events: none;
+}
+
+.work-photo-card figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 16px;
+  bottom: 14px;
+  left: 16px;
+  color: var(--branco);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.work-photo-card figcaption strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--dourado-claro);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin: 14px 0 16px;
+}
+
+.detail-photo-card {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  overflow: hidden;
+  background: #dfe7e1;
+  border: 1px solid rgb(212 175 55 / 48%);
+  border-radius: 18px;
+  box-shadow: 0 13px 28px rgb(11 61 43 / 13%);
+}
+
+.detail-photo-card figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 11px;
+  bottom: 11px;
+  left: 11px;
+  color: var(--branco);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.feature-chips {
+  gap: 9px;
+}
+
+.feature-chips li {
+  min-height: 50px;
+  padding: 10px 11px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.illustration-note {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.process-list {
+  gap: 10px;
+}
+
+.process-list li,
+.difference-list li {
+  padding: 12px 13px;
+}
+
+.process-list > li > span {
+  width: 34px;
+  height: 34px;
+  font-size: 15px;
+}
+
+.process-list strong,
+.difference-list strong {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.process-list small,
+.difference-list small {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.budget-card {
+  min-height: 148px;
+  padding: 16px 52px 16px 16px;
+}
+
+.budget-label {
+  font-size: 13px;
+}
+
+.budget-card > strong {
+  font-size: 17px;
+}
+
+.budget-card > b {
+  font-size: 27px;
+}
+
+.budget-details {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.selection-status {
+  min-height: 22px;
+  font-size: 14px;
+}
+
+.person-card strong {
+  font-size: 17px;
+}
+
+.person-card span {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.choice-summary span {
+  font-size: 13px;
+}
+
+.choice-summary strong {
+  font-size: 16px;
+}
+
+.choice-summary b {
+  font-size: 27px;
+}
+
+.whatsapp-button small {
+  font-size: 13px;
+}
+
+.dialog-subtitle,
+.material-list li {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+@media (max-width: 380px) {
+  .brand {
+    min-width: 100px;
+  }
+
+  .hero-media {
+    flex-basis: 210px;
+  }
+
+  .hero-content {
+    padding-inline: 18px;
+  }
+
+  .hero-facts > div {
+    padding-left: 11px;
+  }
+
+  .hero-facts svg {
+    display: none;
+  }
+
+  .feature-chips {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 790px) {
+  .hero-media {
+    flex-basis: 210px;
+    min-height: 190px;
+  }
+}
+
+@media (max-height: 700px) {
+  .hero-media {
+    flex-basis: 185px;
+    min-height: 170px;
+  }
+}
